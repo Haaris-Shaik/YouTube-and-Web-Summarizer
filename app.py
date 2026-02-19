@@ -8,8 +8,8 @@ from langchain_community.chat_models import ChatOllama
 
 ## Streamlit App
 st.set_page_config(page_title="Langchain: Summarize Text from YT or Website", page_icon="🙂")
-st.title("🙂 Langchain: Summarize Text from YT or Website")
-st.subheader("Summarize URL")
+st.title("🙂 Summarize Text from YT videos or Websites")
+st.subheader("Upload URL")
 
 with st.sidebar:
     UseGroq = st.toggle("Use Your Own Groq API")
@@ -63,5 +63,6 @@ if st.button("Summarize the content from YT or website"):
         except Exception as e:
 
             st.exception(f"Exception:{e}")
+
 
 
