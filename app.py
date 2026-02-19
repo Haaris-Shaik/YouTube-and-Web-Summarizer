@@ -12,13 +12,13 @@ st.title("🙂 Langchain: Summarize Text from YT or Website")
 st.subheader("Summarize URL")
 
 with st.sidebar:
-    UseGroq = st.toggle("Use Groq")
+    UseGroq = st.toggle("Use Your Own Groq API")
     if UseGroq:
         groq_api_key=st.text_input("Groq API Key",value="",type="password")
         model=st.text_input("Model",value="")
         llm=ChatGroq(model=model,groq_api_key=groq_api_key)
     else:
-        llm = ChatOllama(model='llama3.1')
+        llm = ChatGroq(model='llama-3.3-70b-versatile',groq_api_key="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")
 
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
@@ -63,3 +63,4 @@ if st.button("Summarize the content from YT or website"):
         except Exception as e:
 
             st.exception(f"Exception:{e}")
+
