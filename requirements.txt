@@ -1,0 +1,12 @@
+ipykernel
+langchain
+langchain-groq
+groq
+python-dotenv
+langchain_classic
+langchain_community
+validators
+streamlit
+unstructured
+pytube==15.0.0
+youtube-transcript-api
