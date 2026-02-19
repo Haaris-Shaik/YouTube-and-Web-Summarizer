@@ -25,7 +25,7 @@ generic_url=st.text_input("URL",label_visibility="collapsed")
 
 
 prompt_template="""
-Provide summary of the following content in 300 words:
+Provide summary of the following content in crisp manner and highlight the major topics and details:
 Content:{text}
 """
 
@@ -63,6 +63,7 @@ if st.button("Summarize the content from YT or website"):
         except Exception as e:
 
             st.exception(f"Exception:{e}")
+
 
 
 
