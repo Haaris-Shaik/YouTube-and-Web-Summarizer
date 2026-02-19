@@ -10,3 +10,4 @@ streamlit
 unstructured
 pytube==15.0.0
 youtube-transcript-api
+ollama
