@@ -33,8 +33,11 @@ prompt=PromptTemplate(template=prompt_template,input_variables=['text'])
 
 
 if st.button("Summarize the content from YT or website"):
-    if not groq_api_key.strip() or not generic_url.strip():
-            st.error("Please provide the information to get started")
+    if UseGroq and not groq_api_key.strip():
+        st.error("Please provide the information to get started")
+
+    elif not generic_url.strip():
+        st.error("Please provide the information to get started")
 
     elif not validators.url(generic_url):
         st.error("Please enter a valid URL. It can be a YT video url or website url")
