@@ -18,7 +18,7 @@ with st.sidebar:
         model=st.text_input("Model",value="")
         llm=ChatGroq(model=model,groq_api_key=groq_api_key)
     else:
-        llm = ChatOllama(model='llama3.2')
+        llm = ChatOllama(model='llama3.1')
 
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
@@ -61,4 +61,5 @@ if st.button("Summarize the content from YT or website"):
                     st.success(output_summary)
 
         except Exception as e:
+
             st.exception(f"Exception:{e}")
